@@ -5,6 +5,7 @@
 #define PI 3
 
 double f(double);
+double fl(double);
 
 using namespace std;
 
@@ -84,10 +85,28 @@ int main()
             printf("+%f^%d",nTabelaA[nI],nI);
     }
     printf("\n\n");
+
     return 0;
 }
 
 double f(double tnX){
+    double nRetorno;
+
+    switch(nFunc){
+    case 1:
+        nRetorno = exp(tnX);
+        break;
+    case 2:
+        nRetorno = cos(tnX);
+        break;
+    case 3:
+        nRetorno = sin(tnX);
+        break;
+    }
+    return nRetorno;
+}
+
+double fl(double tnX){
     double nRetorno;
 
     switch(nFunc){
